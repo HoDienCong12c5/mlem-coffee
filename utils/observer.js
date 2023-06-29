@@ -14,7 +14,7 @@ class ObserverClass {
     eventEmitter.emit(key, object)
   }
 
-  removeListener (key, func) {
+  removeListener (key, func = ()=>{}) {
     eventEmitter.removeListener(key, func)
   }
 }

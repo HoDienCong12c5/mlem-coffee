@@ -23,8 +23,8 @@ const ImageNext = ({
   return (
     <ContainerImageNext
       style={{
-        width: fullSize ? '100%' : width,
-        height: fullSize ? '100%' : height,
+        width: fullSize ? '100%' : width?.toString().includes('px') ? `${width}px` : width,
+        height: fullSize ? '100%' : height?.toString().includes('px') ? `${height}px` : height,
       }}
       className={className}
     >

@@ -31,6 +31,9 @@ const useModal = () => {
           afterClose,
           opacity,
           boxShadow,
+          maskClosable:true,
+          closable:true,
+          keyboard:true
         })
       )
     },

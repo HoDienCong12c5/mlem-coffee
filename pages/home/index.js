@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container } from './styled'
 import Image from 'next/image'
+import { useSelector } from 'react-redux'
 
 const HomeScreen = () => {
+  const messages = useSelector(state=>state.app.language)
   return (
     <Container >
       <div>

@@ -43,7 +43,7 @@ export const CONNECTION_METHOD = {
   WALLET_CONNECT: 'WALLET_CONNECT',
   PANTOGRAPH: 'PANTOGRAPH'
 }
-export const modalConfig = {
+export const MODAL_CONFIG = {
   wrapClassName: '',
   width: 500,
   //click over modal to close
@@ -59,7 +59,7 @@ export const modalConfig = {
 }
 export const GlobalModal = {
   body: <></>,
-  modalConfig:modalConfig
+  modalConfig:MODAL_CONFIG
 }
 export const OBSERVER_KEY = {
   CHANGED_ACCOUNT:'CHANGED_ACCOUNT',

@@ -1,26 +1,32 @@
-import React from 'react'
-import styles from '@/styles/Home.module.css'
+import React, { useMemo } from 'react'
+
 import { Affix } from 'antd'
-import Header from './header'
-import Footer from './Footer'
 import { styled } from 'styled-components'
+import dynamic from 'next/dynamic'
+import SEO from './seo'
+const MyModal = dynamic(()=>import('@/components/MyModal'))
+const Header = dynamic(()=>import('./header'))
+const Footer = dynamic(()=>import('./Footer'))
 const ContainerApp = styled.div`
   max-width: 1550px;
   padding: 0px 50px;
   
 `;
 const Container = ({children}) => {
+  const modalComponent = useMemo(() => <MyModal />, []);
   return (
     <>
+      <SEO />
       <Affix >
         <Header />
       </Affix>
-      <main className={styles['main-body'] }>
+      <main className={'main-body'}>
         <ContainerApp >
           {children}
         </ContainerApp>
       </main>
       <Footer />
+      {modalComponent}
     </>
   )
 }

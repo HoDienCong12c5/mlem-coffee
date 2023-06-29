@@ -30,6 +30,8 @@ const MyMenu = ({
 }) => {
   return (
     <MyMenuCustom
+      style={{width:'auto'}}
+
       onClick={onClick}
       mode={mode}
       items={listItemMenu}

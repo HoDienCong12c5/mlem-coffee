@@ -1,16 +1,16 @@
 import ImageNext from '@/components/ImageNext';
 import styled from 'styled-components';
+export const ContainerBaseHeader = styled.div`
+  width: 100%;
+  border: 1px solid white;
+`
 export const ContainerHeader = styled.div`
-display: flex;
-flex-wrap: nowrap;
-gap: 10px;
-width: auto;
-height: 50px;
-justify-content: center;
-align-items: center;
-   /* @media screen and (max-width: 768px){
-    flex-flow: column;
-  } */
+  display: flex;
+  gap:10px;
+  align-items: center;
+  width: 100%;
+  max-width: 1550px;
+  padding: 0 50px;
 `
 export const LogoHeader = styled(ImageNext)`
     height: 40px;
